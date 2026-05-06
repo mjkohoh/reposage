@@ -1,4 +1,4 @@
-# GitHub Trending 简报（本周）
+# GitHub Trending 简报（2026 年第 18 周）
 
 ## 摘要
 

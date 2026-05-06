@@ -94,7 +94,7 @@ docs/trending/github/
 使用这个结构：
 
 ```markdown
-# GitHub Trending 简报（<周期中文>）
+# GitHub Trending 简报（<具体周期>）
 
 ## 摘要
 
@@ -119,6 +119,12 @@ docs/trending/github/
 
 ## 更新记录
 ```
+
+标题必须使用可长期阅读的具体周期，不使用“今天”“本周”“本月”这类相对表述。示例：
+
+- 日报：`# GitHub Trending 简报（2026-05-06）`
+- 周报：`# GitHub Trending 简报（2026 年第 19 周）`
+- 月报：`# GitHub Trending 简报（2026 年 05 月）`
 
 默认选择 Top 10 项目，除非用户要求更多或更少。
 
