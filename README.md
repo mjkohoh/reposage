@@ -9,7 +9,7 @@
 - 阅读关键源码，解释核心模块、入口、调用链路和设计思路。
 - 记录调研结论、验证步骤、风险点和后续问题。
 - 为每个项目建立可持续维护的中文研究档案。
-- 跟踪 GitHub Trending 日/周/月趋势，生成轻量中文简报，帮助筛选值得深入研究的项目。
+- 跟踪 GitHub Trending 日/周/月趋势，并可按自然语言筛选，生成轻量中文简报，帮助筛选值得深入研究的项目。
 
 ## 适合解决的问题
 
@@ -22,7 +22,7 @@
 ## 内置 Skills
 
 - [reposage-project-research](./skills/reposage-project-research/SKILL.md)：给定开源项目地址，完成系统调研并生成结构化中文文档。
-- [reposage-github-trending-brief](./skills/reposage-github-trending-brief/SKILL.md)：按日/周/月获取 GitHub Trending，生成或更新趋势简报。
+- [reposage-github-trending-brief](./skills/reposage-github-trending-brief/SKILL.md)：按日/周/月获取 GitHub Trending，可选按自然语言筛选，生成或更新趋势简报。
 
 ## 推荐文档目录
 
@@ -46,6 +46,7 @@
         └── github/
             ├── daily-YYYY-MM-DD.md
             ├── weekly-YYYY-Www.md
+            ├── weekly-zh-YYYY-Www.md
             └── monthly-YYYY-MM.md
 ```
 
@@ -57,7 +58,7 @@
 - `docs/projects/<host>-<owner>-<repo>/usage.md`：安装配置、运行方式、常用命令和验证结果。
 - `docs/projects/<host>-<owner>-<repo>/architecture.md`：源码结构、核心模块、关键流程和设计分析。
 - `docs/projects/<host>-<owner>-<repo>/notes.md`：调研笔记、疑问、风险和后续研究方向。
-- `docs/trending/github/`：GitHub Trending 日/周/月趋势简报。
+- `docs/trending/github/`：GitHub Trending 日/周/月趋势简报，可按自然语言生成独立报告。
 
 ## 已研究项目
 
@@ -78,6 +79,7 @@
 
 ```text
 告诉我本周 GitHub 趋势
+拉取本周中文 GitHub 趋势
 ```
 
 `reposage` 会根据对应 skill 执行：项目调研会阅读项目资料和代码并记录文档；趋势简报只做主页级轻量观察，不下载源码，并会复用同一周期的既有报告进行更新。

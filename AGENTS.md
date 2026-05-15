@@ -11,7 +11,7 @@
 - 总结安装、配置、运行、开发、部署和扩展方式。
 - 记录关键源码结构、核心模块、数据流和重要设计决策。
 - 产出结构清晰、可持续更新的中文文档。
-- 跟踪 GitHub Trending 的日/周/月趋势，生成轻量中文简报，帮助用户发现值得后续深入研究的项目。
+- 跟踪 GitHub Trending 的日/周/月趋势，并可按自然语言筛选生成轻量中文简报，帮助用户发现值得后续深入研究的项目。
 - 默认使用中文与用户沟通，并使用中文编写调研文档。
 
 ## 功能 Skills
@@ -19,7 +19,7 @@
 本项目的两个核心能力已拆分为项目内 skills。执行对应任务时，先阅读并遵循对应 `SKILL.md`：
 
 - [reposage-project-research](./skills/reposage-project-research/SKILL.md)：用户给出开源项目地址后，进行系统调研并沉淀 `overview.md`、`usage.md`、`architecture.md`、`notes.md`。
-- [reposage-github-trending-brief](./skills/reposage-github-trending-brief/SKILL.md)：按日/周/月跟踪 GitHub Trending，生成或更新轻量中文趋势简报，不克隆项目源码。
+- [reposage-github-trending-brief](./skills/reposage-github-trending-brief/SKILL.md)：按日/周/月跟踪 GitHub Trending，可选按自然语言筛选，生成或更新轻量中文趋势简报，不克隆项目源码。
 
 当用户对趋势简报中的某个项目感兴趣并要求进一步研究时，从 `reposage-github-trending-brief` 切换到 `reposage-project-research`。
 
