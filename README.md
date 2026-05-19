@@ -66,6 +66,7 @@
 - [mattpocock/skills](./docs/projects/github-mattpocock-skills/overview.md)：面向 AI coding agent 的工程工作流技能包。
 - [zilliztech/claude-context](./docs/projects/github-zilliztech-claude-context/overview.md)：面向 AI coding agent 的语义代码搜索 MCP 工具。
 - [mksglu/context-mode](./docs/projects/github-mksglu-context-mode/overview.md)：面向 AI coding agent 的上下文窗口治理与会话连续性 MCP 工具。
+- [colbymchenry/codegraph](./docs/projects/github-colbymchenry-codegraph/overview.md)：面向 AI coding agent 的本地代码知识图谱与 MCP 结构化查询工具。
 
 ## 使用方式
 
