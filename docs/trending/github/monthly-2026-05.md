@@ -2,121 +2,132 @@
 
 ## 摘要
 
-- 查询时间：2026-05-15 13:30（Asia/Shanghai）
-- 周期：monthly / This month
-- 数据源：[GitHub Trending this month](https://github.com/trending?since=monthly)，并轻量查看了入选项目主页。
-- 本次结论：本月榜单被 AI coding agent 相关项目强势占据，尤其是 `skills`、`CLAUDE.md`、agent 平台、agent 记忆与自动化执行框架。值得注意的是，前 10 中也混入安全工具集合与金融场景样例仓库，说明热点不只是“模型调用”，还在向可复用工作流、行业场景和工具生态扩散。
+- 查询时间：2026-05-29 09:43 CST（Asia/Shanghai）
+- 周期：本月 / monthly
+- 自然语言筛选：无，GitHub Trending 全量榜单
+- 数据源：https://github.com/trending?since=monthly
+- 本次结论：5 月月榜尾声进一步确认了一个结构性结论：`colbymchenry/codegraph` 稳住第 1，`anthropics/financial-services` 与 `CloakBrowser` 维持高位，而后半区从 `warp`、`jcode`、`ViMax` 进一步切换为 `ai-engineering-from-scratch`、`9router`、`maigret`。这说明月度主线从“agent 环境与生成应用”继续回收到“代码理解、垂直场景、研究取证和工程学习”。
+
+## 筛选条件
+
+- 时间范围：This month / monthly
+- 自然语言：Any
+- 说明：未添加 `spoken_language_code`，也未按开发语言筛选；排名、stars、forks 与对应周期新增 stars 来自 GitHub Trending 页面在查询时展示的数据。适用场景与关注理由基于趋势页和仓库主页可见信息推断，尚未本地验证。
 
 ## 趋势项目
 
-### 1. multica-ai/andrej-karpathy-skills
+### 1. colbymchenry/codegraph
 
-- 链接：https://github.com/multica-ai/andrej-karpathy-skills
-- 主要语言/技术栈：未在 Trending 行显示主要语言；仓库核心是 `CLAUDE.md`、`CURSOR.md`、skills 目录与 Claude Code/Cursor 使用说明。
-- GitHub 简介：一个用于改善 Claude Code 行为的 `CLAUDE.md` 文件，基于 Andrej Karpathy 对 LLM 编程问题的观察整理。
-- 趋势信号：129,777 stars / 13,159 forks；本月新增 99,894 stars。
-- 适用场景：给 Claude Code、Cursor 或类似 AI coding agent 增加“先思考、少改动、避免过度设计、以验证目标驱动”的行为约束。
-- 初步关注理由：它反映了本月最强的主题：用户开始把 agent 质量问题沉淀为可复制的规则文件，而不是只依赖单次 prompt。
-- 不确定性：尚未验证这些规则在不同代码库中的实际收益；README 中的效果描述需要通过真实任务对比确认。
+- 链接：https://github.com/colbymchenry/codegraph
+- 主要语言/技术栈：TypeScript / MCP / local code knowledge graph
+- GitHub 简介：Pre-indexed code knowledge graph for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, and Hermes Agent — fewer tokens, fewer tool calls, 100% local
+- 趋势信号：31,807 stars / 1,878 forks；本月新增 30,718 stars。
+- 适用场景：为 Claude Code、Codex、Cursor 等提供本地代码索引、关系查询和上下文压缩。
+- 初步关注理由：从第 2 升到第 1，说明 5 月末最强月度主题已经从“skills 清单”切换到“代码理解基础设施”。
+- 不确定性：索引成本、跨语言表现与大型仓库上的稳定性尚未验证。
 
-### 2. mattpocock/skills
-
-- 链接：https://github.com/mattpocock/skills
-- 主要语言/技术栈：Shell；面向 Claude/Codex 等 coding agent 的技能与工程工作流集合。
-- GitHub 简介：来自 Matt Pocock `.claude` 目录的工程技能集合。
-- 趋势信号：82,594 stars / 7,134 forks；本月新增 66,519 stars。
-- 适用场景：复用成熟工程师的 agent 工作流，例如调试、重构、测试、类型系统和文档任务。
-- 初步关注理由：与 `andrej-karpathy-skills` 相比，它更偏“任务技能库”，说明 agent 使用正在从单一规则走向可组合工作流。
-- 不确定性：项目内容更新快，具体 skill 的质量和适用边界需要逐项阅读验证。
-
-### 3. Alishahryar1/free-claude-code
-
-- 链接：https://github.com/Alishahryar1/free-claude-code
-- 主要语言/技术栈：Python。
-- GitHub 简介：声称可在终端、VSCode 扩展或 Discord 中免费使用 claude-code，并类似 OpenClaw，支持语音。
-- 趋势信号：24,617 stars / 3,659 forks；本月新增 22,809 stars。
-- 适用场景：对 Claude Code 类体验有兴趣、希望尝试替代接入方式的个人用户。
-- 初步关注理由：需求信号非常明确：开发者对低门槛、低成本的 coding agent 接入方式有强烈兴趣。
-- 不确定性：涉及第三方服务接入与“免费”使用声明，合规性、稳定性、安全性均尚未验证；不建议在生产或敏感代码环境中直接采用。
-
-### 4. AIDC-AI/Pixelle-Video
-
-- 链接：https://github.com/AIDC-AI/Pixelle-Video
-- 主要语言/技术栈：Python。
-- GitHub 简介：AI 全自动短视频引擎。
-- 趋势信号：16,735 stars / 2,423 forks；本月新增 12,733 stars。
-- 适用场景：短视频内容生成、自动化剪辑、批量素材处理、AI 内容生产流水线。
-- 初步关注理由：从 coding agent 之外看，AI 视频生成仍是开源热点；“全自动短视频引擎”切中了内容生产工作流。
-- 不确定性：尚未验证生成质量、模型依赖、版权/素材处理方式与部署成本。
-
-### 5. lsdefine/GenericAgent
-
-- 链接：https://github.com/lsdefine/GenericAgent
-- 主要语言/技术栈：Python；浏览器、终端、文件系统、键鼠、屏幕视觉、ADB 等本机控制能力。
-- GitHub 简介：一个自进化 agent 框架，强调从约 3K 行核心代码和 9 个原子工具出发，自动沉淀技能树。
-- 趋势信号：11,408 stars / 1,300 forks；本月新增 10,252 stars。
-- 适用场景：个人自动化 agent、本机系统控制、跨应用任务自动化、长期积累个人工作流。
-- 初步关注理由：它把“agent 记忆/技能沉淀”作为核心卖点，和本月 skills 热点形成呼应。
-- 不确定性：README 中关于 token 效率、系统控制和自举能力的实验结论尚未本地复现；系统级控制也带来安全边界问题。
-
-### 6. ComposioHQ/awesome-codex-skills
-
-- 链接：https://github.com/ComposioHQ/awesome-codex-skills
-- 主要语言/技术栈：Python；Codex CLI/API 工作流技能清单。
-- GitHub 简介：实用 Codex skills 的精选列表，用于自动化 Codex CLI 和 API 工作流。
-- 趋势信号：9,622 stars / 897 forks；本月新增 8,774 stars。
-- 适用场景：寻找 Codex skills 模板、扩展自动化工作流、建立团队内部技能目录。
-- 初步关注理由：它说明 Codex 技能生态正在形成“awesome list”式入口，有利于后续筛选高价值 skill 做深度研究。
-- 不确定性：精选列表不等于质量保证；每个条目的维护状态、适配版本和权限边界仍需单独确认。
-
-### 7. NousResearch/hermes-agent
-
-- 链接：https://github.com/NousResearch/hermes-agent
-- 主要语言/技术栈：Python。
-- GitHub 简介：项目主页标语为 “The agent that grows with you”。
-- 趋势信号：150,513 stars / 23,841 forks；本月新增 68,208 stars。
-- 适用场景：关注可成长 agent、长期记忆、个人化工作流的开发者。
-- 初步关注理由：总 stars 和本月新增 stars 都非常高，且与 GenericAgent 一样强调“随使用成长”的 agent 方向。
-- 不确定性：这里只做主页级轻量观察，具体架构、真实可用性和项目活跃度尚未验证。
-
-### 8. addyosmani/agent-skills
-
-- 链接：https://github.com/addyosmani/agent-skills
-- 主要语言/技术栈：Shell；面向 AI coding agent 的工程技能集合。
-- GitHub 简介：面向生产级工程的 AI coding agent skills。
-- 趋势信号：41,633 stars / 4,571 forks；本月新增 26,393 stars。
-- 适用场景：把常见工程任务封装成 agent 可复用技能，尤其适合团队规范、代码质量、交付流程场景。
-- 初步关注理由：与 Matt Pocock 的 skills 仓库形成强烈同类信号，说明“技能化的工程知识”正在成为 coding agent 落地的重要载体。
-- 不确定性：尚未逐项验证 skill 的完整性、可迁移性和是否绑定特定工具链。
-
-### 9. Z4nzu/hackingtool
-
-- 链接：https://github.com/Z4nzu/hackingtool
-- 主要语言/技术栈：Python；安全研究、渗透测试工具集合。
-- GitHub 简介：面向安全研究人员和渗透测试人员的 all-in-one hacking tool。
-- 趋势信号：74,507 stars / 8,408 forks；本月新增 16,576 stars。
-- 适用场景：安全研究、工具索引、渗透测试实验环境。
-- 初步关注理由：这是本月 Top 10 中少数非 agent 方向项目，安全工具集合仍然有很强传播性。
-- 不确定性：包含攻击、安全测试相关能力，只应在授权环境中使用；工具链安全性、依赖来源和法律边界需要严格审查。
-
-### 10. anthropics/financial-services
+### 2. anthropics/financial-services
 
 - 链接：https://github.com/anthropics/financial-services
-- 主要语言/技术栈：Python。
-- GitHub 简介：Trending 页面未显示简介；基于仓库名推断，项目面向金融服务场景。
-- 趋势信号：22,821 stars / 3,126 forks；本月新增 15,279 stars。
-- 适用场景：金融行业 AI/自动化样例、金融服务 demo 或参考实现。
-- 初步关注理由：行业场景仓库进入本月榜单，说明 AI 工具化热点正从通用 agent 扩展到金融等垂直领域。
-- 不确定性：尚未进一步核验 README 具体内容，以上场景判断主要来自仓库名和 Trending 元数据；金融相关项目不能直接作为生产合规依据。
+- 主要语言/技术栈：Python / vertical AI workflow（基于仓库名与主页推断）
+- GitHub 简介：Trending 页面未给出明确简介；以下定位主要基于仓库主页标题与仓库名推断。
+- 趋势信号：28,522 stars / 3,996 forks；本月新增 20,790 stars。
+- 适用场景：研究金融服务场景中的 AI workflow 或参考实现。
+- 初步关注理由：从第 3 升到第 2，说明垂直金融场景在本月并不是边缘话题，而是持续高热主线。
+- 不确定性：主页公开描述依然有限，定位、合规边界和生产可用性尚未验证。
+
+### 3. CloakHQ/CloakBrowser
+
+- 链接：https://github.com/CloakHQ/CloakBrowser
+- 主要语言/技术栈：Python / Chromium / Playwright / fingerprint patches
+- GitHub 简介：Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.
+- 趋势信号：22,106 stars / 1,763 forks；本月新增 20,646 stars。
+- 适用场景：在授权测试或研究环境下处理浏览器自动化与反 bot 兼容问题。
+- 初步关注理由：从第 4 升到第 3，说明浏览器自动化摩擦仍然是 agent 体系里最稳定的高需求点之一。
+- 不确定性：绕过检测的宣传口径尚未验证，且存在明显合规边界。
+
+### 4. rohitg00/agentmemory
+
+- 链接：https://github.com/rohitg00/agentmemory
+- 主要语言/技术栈：TypeScript / persistent memory / AI coding agents
+- GitHub 简介：#1 Persistent memory for AI coding agents based on real-world benchmarks
+- 趋势信号：19,319 stars / 1,579 forks；本月新增 17,217 stars。
+- 适用场景：让 coding agent 跨会话保存项目结构、决策和用户偏好。
+- 初步关注理由：今天升到第 4，说明“长期记忆”仍然是 5 月末最稳定的 agent 基础能力之一。
+- 不确定性：记忆污染、隐私隔离与生命周期治理尚未验证。
+
+### 5. mattpocock/skills
+
+- 链接：https://github.com/mattpocock/skills
+- 主要语言/技术栈：Shell / Markdown / AI coding agent skills
+- GitHub 简介：Skills for Real Engineers. Straight from my .claude directory.
+- 趋势信号：110,236 stars / 9,673 forks；本月新增 75,448 stars。
+- 适用场景：把需求澄清、测试、调试、重构和文档等工程习惯沉淀给 coding agent。
+- 初步关注理由：虽然继续下滑到第 5，但仍稳居第一梯队，说明 workflow/skills 依旧是 5 月传播力最强的资产之一。
+- 不确定性：迁移成本和对不同工程栈的真实收益仍需在具体仓库验证。
+
+### 6. Lum1104/Understand-Anything
+
+- 链接：https://github.com/Lum1104/Understand-Anything
+- 主要语言/技术栈：TypeScript / knowledge graph / code understanding
+- GitHub 简介：Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about.
+- 趋势信号：42,872 stars / 3,419 forks；本月新增 33,147 stars。
+- 适用场景：快速理解大型代码库、知识库或复杂文档结构。
+- 初步关注理由：升到第 6，且日榜、周榜也在高位，说明图谱化代码理解已经是跨日周月同时成立的主线。
+- 不确定性：图谱构建质量、跨语言覆盖和大仓库性能尚未本地验证。
+
+### 7. Imbad0202/academic-research-skills
+
+- 链接：https://github.com/Imbad0202/academic-research-skills
+- 主要语言/技术栈：Python / Claude Code skills / academic workflow
+- GitHub 简介：Academic Research Skills for Claude Code: research → write → review → revise → finalize
+- 趋势信号：23,382 stars / 1,951 forks；本月新增 19,583 stars。
+- 适用场景：文献研究、学术写作、审稿与修订流程辅助。
+- 初步关注理由：虽然从第 8 升到第 7 幅度不大，但说明专业知识工作流仍有稳定月度吸引力。
+- 不确定性：学术诚信、引用质量与跨学科适配效果尚未验证。
+
+### 8. rohitg00/ai-engineering-from-scratch
+
+- 链接：https://github.com/rohitg00/ai-engineering-from-scratch
+- 主要语言/技术栈：Python / AI engineering learning / 教程型仓库
+- GitHub 简介：Learn it. Build it. Ship it for others.
+- 趋势信号：23,896 stars / 3,879 forks；本月新增 18,067 stars。
+- 适用场景：用项目化路径学习 AI 应用构建、交付与工程化实践。
+- 初步关注理由：新进月榜第 8，说明 5 月后段不仅工具在涨，“工程学习路径”本身也成为高热内容资产。
+- 不确定性：课程深度、代码质量与维护连续性尚未验证。
+
+### 9. decolua/9router
+
+- 链接：https://github.com/decolua/9router
+- 主要语言/技术栈：JavaScript / AI access layer / provider routing
+- GitHub 简介：Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers.
+- 趋势信号：14,902 stars / 2,231 forks；本月新增 11,689 stars。
+- 适用场景：为 Claude Code、Codex、Cursor 等接入多供应商模型与自动 fallback。
+- 初步关注理由：新进月榜第 9，说明“模型接入与降本路由层”仍是强需求，而不是被上层 agent 全部吞掉。
+- 不确定性：治理能力、延迟开销和生产级可靠性尚未验证。
+
+### 10. soxoj/maigret
+
+- 链接：https://github.com/soxoj/maigret
+- 主要语言/技术栈：Python / OSINT / username search
+- GitHub 简介：Collect a dossier on a person by username from 3000+ sites
+- 趋势信号：30,801 stars / 2,202 forks；本月新增 11,082 stars。
+- 适用场景：做公开资料检索、用户名足迹收集与初步 OSINT 调查。
+- 初步关注理由：它回到月榜第 10，说明 5 月后半段除了 agent 工具外，研究取证类工具也保有持续关注。
+- 不确定性：结果准确性、站点覆盖和合规边界尚未验证。
 
 ## 观察
 
-- 本月最强主线是 “agent skills”：`andrej-karpathy-skills`、`mattpocock/skills`、`awesome-codex-skills`、`agent-skills` 全都在榜，说明开发者正在把 AI coding agent 的经验沉淀成文件、规则和可复用技能。
-- 第二条主线是 “agent 可成长/可长期使用”：`GenericAgent`、`hermes-agent`、`multica` 等项目都在强调记忆、技能树、任务管理或 agent 平台化。
-- AI 内容生产仍有热度：`Pixelle-Video` 代表视频生成与短视频自动化方向。
-- 安全与金融是两个值得谨慎跟进的垂直场景：前者存在合规和授权边界，后者存在准确性、审计和监管要求。
-- 初步优先研究建议：如果目标是提升日常编码 agent 质量，优先看 `multica-ai/andrej-karpathy-skills`、`mattpocock/skills`、`addyosmani/agent-skills`；如果目标是研究长期 agent 架构，再看 `lsdefine/GenericAgent` 和 `NousResearch/hermes-agent`。
+- 月榜前 3 没变，说明 5 月最稳的长期注意力仍集中在“代码理解基础设施 + 垂直金融场景 + 浏览器自动化摩擦”。
+- 月榜后半区从 `warp`、`jcode`、`ViMax` 切换到 `ai-engineering-from-scratch`、`9router`、`maigret`，说明月末兴趣从“运行环境与生成应用”转向“学习、网关与研究取证”。
+- `agentmemory` 升到第 4，而 `skills` 继续下滑到第 5，说明大家对“长期记忆”这类基础能力的关注在抬升。
+- `Understand-Anything` 与 `codegraph` 同时高位，进一步确认“图谱/索引化代码理解”是 5 月跨周期最强主题之一。
 
 ## 更新记录
 
-- 2026-05-15 13:30：创建 2026 年 05 月 GitHub Trending 月度简报初版，覆盖 Top 10 项目。
+- 2026-05-15 13:30 CST：创建 2026 年 05 月 GitHub Trending 月度简报初版，覆盖 Top 10 项目。
+- 2026-05-23 13:22 CST：更新同周期简报。新增 Top 10 项目：`CloakHQ/CloakBrowser`、`colbymchenry/codegraph`、`refactoringhq/tolaria`、`rohitg00/agentmemory`、`Imbad0202/academic-research-skills`；掉出 Top 10 项目：`lsdefine/GenericAgent`、`ComposioHQ/awesome-codex-skills`、`NousResearch/hermes-agent`、`addyosmani/agent-skills`、`Z4nzu/hackingtool`。主要排名变化：`mattpocock/skills` 第 2 -> 第 1，`Alishahryar1/free-claude-code` 第 3 -> 第 2，`anthropics/financial-services` 第 10 -> 第 5，`multica-ai/andrej-karpathy-skills` 第 1 -> 第 8，`AIDC-AI/Pixelle-Video` 第 4 -> 第 10。
+- 2026-05-24 11:26 CST：更新同周期简报。新增 Top 10 项目：`ComposioHQ/awesome-codex-skills`、`soxoj/maigret`；掉出 Top 10 项目：`refactoringhq/tolaria`、`AIDC-AI/Pixelle-Video`。主要排名变化：`colbymchenry/codegraph` 第 4 -> 第 2，`anthropics/financial-services` 第 5 -> 第 3，`CloakHQ/CloakBrowser` 第 3 -> 第 4，`rohitg00/agentmemory` 第 7 -> 第 5，`Alishahryar1/free-claude-code` 第 2 -> 第 6，`Imbad0202/academic-research-skills` 第 9 -> 第 8，`multica-ai/andrej-karpathy-skills` 第 8 -> 第 9。
+- 2026-05-26 10:07 CST：更新同周期简报。新增 Top 10 项目：`TauricResearch/TradingAgents`、`AIDC-AI/Pixelle-Video`；掉出 Top 10 项目：`Alishahryar1/free-claude-code`、`ComposioHQ/awesome-codex-skills`。主要排名变化：`Imbad0202/academic-research-skills` 第 8 -> 第 6，`soxoj/maigret` 第 10 -> 第 7；`mattpocock/skills`、`colbymchenry/codegraph`、`anthropics/financial-services`、`CloakHQ/CloakBrowser`、`rohitg00/agentmemory`、`multica-ai/andrej-karpathy-skills` 排名保持不变。
+- 2026-05-28 10:03 CST：更新同周期简报。新增 Top 10 项目：`warpdotdev/warp`、`Lum1104/Understand-Anything`、`1jehuang/jcode`、`HKUDS/ViMax`；掉出 Top 10 项目：`soxoj/maigret`、`TauricResearch/TradingAgents`、`multica-ai/andrej-karpathy-skills`、`AIDC-AI/Pixelle-Video`。主要排名变化：`colbymchenry/codegraph` 第 2 -> 第 1，`anthropics/financial-services` 第 3 -> 第 2，`CloakHQ/CloakBrowser` 第 4 -> 第 3，`mattpocock/skills` 第 1 -> 第 4，`rohitg00/agentmemory` 第 5 -> 第 6，`Imbad0202/academic-research-skills` 第 6 -> 第 8。
+- 2026-05-29 09:43 CST：更新同周期简报。新增 Top 10 项目：`rohitg00/ai-engineering-from-scratch`、`decolua/9router`、`soxoj/maigret`；掉出 Top 10 项目：`warpdotdev/warp`、`1jehuang/jcode`、`HKUDS/ViMax`。主要排名变化：`rohitg00/agentmemory` 第 6 -> 第 4，`mattpocock/skills` 第 4 -> 第 5，`Lum1104/Understand-Anything` 第 7 -> 第 6，`Imbad0202/academic-research-skills` 第 8 -> 第 7；`colbymchenry/codegraph`、`anthropics/financial-services`、`CloakHQ/CloakBrowser` 排名保持不变。
